@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+#wrap{
+   width: 1920px;
+   margin: 0 auto;
+}
+
+h1{
+   height: 100px;
+   line-height: 100px;
+}
+
+.slides{
+   position: relative;
+   margin: 0 auto;
+   width: 100%;
+   height: 450px;
+}
+
+.slides>p{
+   width: 100%;
+   height: 100%;
+   background-image: url(./../images/slide-1.jpg);
+   background-repeat: no-repeat;
+}
+
+.slides>ul{
+   position: absolute;
+   top: 15%;
+   left: 80%;
+   width: 180px;
+   height: 300px;
+   box-shadow: 1px 1px 1px lightgray;
+   cursor:pointer;
+}
+
+.slides>ul>li{
+   display: block;
+   width: 180px;
+   height: 60px;
+}
+
+.slides>ul>li>a{
+   display: block;
+   width: 180px;
+   height: 60px;
+   text-indent: -9999px;
+}
+
+.slides>ul>li.on{
+   border: 1px solid #4285f4;
+}
+
+.slides>ul>li:hover>a{
+   border: 1px solid #4285f4;
+   box-sizing: border-box;
+}
+
+.slides>ul>li:nth-child(1){background-image: url(./../images/indicator-1.jpg);}
+.slides>ul>li:nth-child(2){background-image: url(./../images/indicator-2.jpg);}
+.slides>ul>li:nth-child(3){background-image: url(./../images/indicator-3.jpg);}
+.slides>ul>li:nth-child(4){background-image: url(./../images/indicator-4.jpg);}
+.slides>ul>li:nth-child(5){background-image: url(./../images/indicator-5.jpg);}
+
+.slides>.pagination>.prev{
+   display: block;
+   position: absolute;
+   top: 40%;
+   left: 0%;
+   width: 80px;
+   height: 100px;
+   text-indent: -9999px;
+   background-image: url(./../images/btn_navigation.png);
+   background-position: -5px -225px;
+   background-repeat: no-repeat;
+   cursor: pointer;
+}
+
+.slides>.pagination>.prev:hover{
+   width: 80px;
+   height: 100px;
+   background-position: -5px -335px;   
+}
+
+.slides>.pagination>.next{
+   display: block;
+   position: absolute;
+   top: 40%;
+   right: 0%;
+   width: 80px;
+   height: 100px;
+   text-indent: -9999px;
+   background-image: url(./../images/btn_navigation.png);
+   background-position: -5px -5px;
+   background-repeat: no-repeat;
+   cursor: pointer;
+}
+
+.slides>.pagination>.next:hover{
+   width: 80px;
+   height: 100px;
+   background-position: -5px -115px;
+}
+
+.button{
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   position: absolute;
+   left: 46%;
+   bottom: 2%;
+   width: 150px;
+   height: 70px;
+}
+
+.button>.play{
+   position: relative;
+   width: 50px;
+   height: 50px;
+   margin-right: 5px;
+   text-indent: -9999px;
+   background-color: white;
+   border-radius: 50%;
+   box-shadow: 1px 1px 2px gray;
+   cursor:pointer;
+}
+
+.button>.play>a{
+   position: absolute;
+   top: 10px;
+   left: 20px;
+   width: 0px;
+   height: 0px;
+   border-width: 15px;
+   border-style: solid;
+   border-color: transparent transparent transparent lightgray ;
+}
+
+.button>.play:hover>a{
+   border-left-color: red;
+}
+
+.button>.stop{
+   position: relative;
+   width: 50px;
+   height: 50px;
+   margin-left: 5px;
+   text-indent: -9999px;
+   background-color: white;
+   border-radius: 50%;
+   box-shadow: 1px 1px 2px gray;
+   cursor:pointer;
+}
+
+.button>.stop>a{
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   border-top-width: 5px;
+   border-left-width: 20px;
+   border-style: solid;
+   border-color: lightgray;
+}
+
+.button>.stop:hover>a{
+   border-color: red;
+}
+
+address{
+   display: block;
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+}
+
+
+

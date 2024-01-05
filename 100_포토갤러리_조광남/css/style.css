@@ -1,0 +1,123 @@
+@charset "utf-8";
+
+#wrap{
+   width: 1000px;
+   margin: 0 auto;
+}
+
+header{
+   display: block;
+   width: 936px;
+   height: 100px;
+   /*background-color: pink;*/
+}
+
+h1{
+   color: #696f74;
+   line-height: 100px;
+}
+
+section{
+   width: 936px;
+   height: 325px;
+}
+
+.thmbs{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 935px;
+   height: 325px;
+   border: 1px solid lightgray;
+}
+
+.bigImg{
+   display: block;
+   width: 647px;
+   height: 325px;
+   background-color: pink;
+   background-image: url(./../images/big1.jpg);
+   border-right: 1px solid lightgray;
+}
+
+.thmbs>.container>ul{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 287px;
+   height: calc(95px * 3 + 4px);
+}
+
+.thmbs>.container>ul>li{
+   height: 94px;
+}
+
+.thmbs>.container>ul>li>a{
+   display: block;
+   width: 95px;
+   height: 95px;
+   border-bottom: 1px solid lightgray;
+   box-sizing: border-box;
+}
+
+.thmbs>.container>ul>li:first-child>a{
+   border: 2px solid red;
+   box-sizing: border-box;
+}
+
+.thmbs>.container>ul>li:first-child{background-image: url(./../images/th1.png);}
+.thmbs>.container>ul>li:nth-child(2){background-image: url(./../images/th2.png);}
+.thmbs>.container>ul>li:nth-child(3){background-image: url(./../images/th3.png);}
+.thmbs>.container>ul>li:nth-child(4){background-image: url(./../images/th4.png);}
+.thmbs>.container>ul>li:nth-child(5){background-image: url(./../images/th5.png);}
+.thmbs>.container>ul>li:nth-child(6){background-image: url(./../images/th6.png);}
+.thmbs>.container>ul>li:nth-child(7){background-image: url(./../images/th7.png);}
+.thmbs>.container>ul>li:nth-child(8){background-image: url(./../images/th8.png);}
+.thmbs>.container>ul>li:nth-child(9){background-image: url(./../images/th9.png);}
+
+.thmbs>.container>ul>li:hover>a{
+   border: 2px solid red;
+   box-sizing: border-box;
+}
+
+.thmbs>.container>ul>li:nth-child(2),
+.thmbs>.container>ul>li:nth-child(5),
+.thmbs>.container>ul>li:nth-child(8){
+   border-left: 1px solid lightgray;
+   border-right: 1px solid lightgray;
+}
+
+.arrow{
+   position: relative;
+   line-height: 37px;
+}
+
+.arrow>a{
+   position: absolute;
+   left: 50%;
+   top: 18.5px;
+   width: 0;
+   height: 0;
+   border-width: 8px;
+   border-style: solid;
+   text-indent: -9999px;
+   cursor: pointer;
+}
+
+.prev{
+   margin: -8px 0 0 -15px;
+   border-color: transparent #ccc transparent transparent;
+}
+
+.prev:hover{
+   border-right-color: red;
+}
+
+.next{
+   margin: -8px 0 0 15px;
+   border-color: transparent transparent transparent #ccc;   
+}
+
+.next:hover{
+   border-left-color: red;   
+}

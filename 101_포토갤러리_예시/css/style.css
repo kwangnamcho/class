@@ -1,0 +1,80 @@
+#wrap {
+   width: calc(647px + (97px * 3));
+   margin: 0 auto;
+}
+
+header{
+   width: calc(647px + (97px * 3));
+}
+
+header > h1 {
+   color: #696f74;
+}
+
+section>.container{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between; 
+   width: calc(647px + (97px * 3));
+   height: 325px;
+}
+
+section>.container>screen{
+   display: block;
+   width: 647px;
+   height: 325px;
+}
+
+section>.container>.thmbs{
+   display: block;
+   flex-direction: column;
+   align-items: flex-start;
+   width: 300px;
+   height: 289px;
+   box-sizing: border-box;
+}
+
+section>.container>.thmbs>ul{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 300px;
+   height: 289px;
+   box-sizing: border-box;
+}
+
+section>.container>.thmbs>ul>li>a{
+   display: block;
+   overflow: hidden;
+   width: 95px;
+   height: 95px;
+   border: 1px solid lightgray;
+}
+
+section>.container>.thmbs>.arrow{
+   display: block;
+   width: 289px;
+   height: 36px;
+   font-size: 45px;
+   line-height: 36px;
+   text-align: center;
+}
+
+section>.container>.thmbs>.arrow>a{
+   color: lightgray;
+}
+
+section>.container>.thmbs>ul>li:hover>a{
+   display: block;
+   border: 1px solid red;
+}
+
+section>.container>.thmbs>.arrow>a:first-child:hover{
+   display: inline-block;
+   color: red;
+}
+
+section>.container>.thmbs>.arrow>a:last-child:hover{
+   display: inline-block;
+   color: red;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>html5</title>
+	</head>
+<body>
+   <h1>몫과 나머지 구하기</h1>
+
+   <pre>
+      두개의 수 a, b 를 입력받아 
+      a를 b로 나눈 몫과 나머지를 출력하는 프로그램을 작성하시오.
+      (단, 각 수는 1이상 10000 이하의 정수이다.)
+
+      출력형식
+         몫:33, 나머지:1
+   </pre>
+
+   <hr />
+   
+   <script>
+   		let a = parseInt(prompt('a : 1~10000 사이의 정수를 입력하세요.'));
+   		let b = parseInt(prompt('b : 1~10000 사이의 정수를 입력하세요.'));
+		
+		while(true){
+			if(isNaN(a)){
+				a = prompt('a : 아무 내용도 입력하지 않으셨네요.');
+			}else if(a > 10000){
+				a = prompt('a : 10000 이하의 숫자로 입력하세요.');
+			}			
+			if(isNaN(b)){
+				b = prompt('b : 아무 내용도 입력하지 않으셨네요.');
+			}else if(b > 10000){
+				b = prompt('b : 10000 이하의 숫자로 입력하세요.');
+			}else{
+				break;
+			}
+		}
+   		
+			let c = 0;
+			let d = 0;
+			   				
+			c = parseInt(a / b);
+			d = parseInt(a % b);
+			   				
+			document.write(`입력값a : ${a} 입력값b : ${b} <br />`);
+			document.write(`몫 : ${c} 나머지 : ${d}`);
+
+   </script>
+</body>
+</html>

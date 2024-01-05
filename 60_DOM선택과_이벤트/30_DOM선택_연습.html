@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+</head>
+<body>
+    <h1>이벤트 구문을 작성하려면 반드시 DOM을 먼저 선택해야 한다.</h1>
+
+pre
+
+    <section>
+        <h2 id="tit">세계 여러나라의 인사말</h2>
+        <article>
+           <dl>
+              <dt><strong>토속방언</strong> 버전</dt>
+              <dd class="nation greeting">한국 - 식사하셧습니까? 하모~!</dd>
+              <dd class="nation greeting">중국 - 츠팔러마? 츠팔러</dd>
+              <dd class="nation greeting">
+                 <strong>부시족</strong> 리얼싸운드 -
+                 <strong>일렌트로캉막따따라바오리도? 따따라!</strong>
+              </dd>
+           </dl>
+
+           <hr />
+
+           <h3 id="publisher">웹퍼블리셔로 가는길</h3>
+           <ul id="list">
+              <li class="item">HTML5 & CSS3</li>
+              <li class="item">자바스크립트</li>
+              <li class="item"><em>jQuery</em></li>
+              <li class="item">포토샵/일러스트</li>
+              <li class="item"><em>웹디자인기능사</em></li>
+           </ul>
+        </article>
+     </section>
+
+     <script>
+        //1. 하나만 콕 찝어서 선택할 때
+        const $h3 = document.querySelector('h3');
+        const $publisher = document.querySelector('#publisher');
+
+        console.log('$h3 =', $h3);
+        console.log('$publisher =', $publisher);
+        
+        //2. 여러개를 한꺼번에 선택할 때
+        const $greeting = document.querySelectorAll('.greeting');
+        
+        console.log('$greeting', $greeting); //3개의 dd선택
+        
+        //3. id를 이용해서 선택하는 전통적인 방법
+        const $tit = document.getElementById('tit');
+
+        console.log('$tit =', $tit);
+     </script>
+
+</body>
+</html>
