@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+<body>
+    <h1>fetch()를 이용한 비동기 AJAX 처리</h1>
+    
+    <script>
+        //즉시실행함수 - 딱한번만 작동
+        (async function(){
+
+            let result = null;
+
+            const response = await fetch(`http://mvcweb.dothome.co.kr/get-response.php?ans=100`);
+            result = await response.json();
+
+            //역직렬화
+            const resObj = JSON.parse(result);
+
+            console.log(`resObj 타입은 ${typeof resObj}`);
+
+        })();
+
+        
+    </script>
+</body>
+</html>
